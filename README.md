@@ -1,6 +1,7 @@
 ## 1. Reference 논문 검증 실험
     논문 링크 : https://arxiv.org/pdf/1903.12258.pdf
     github 링크 : https://github.com/rosdyana/Going-Deeper-with-Convolutional-Neural-Network-for-Stock-Market-Prediction
+    실험 코드 : https://github.com/VAIV-SKKU/Going-Deeper-with-Convolutional-Neural-Network-for-Stock-Market-Prediction.git
 
 ### 1) Dataset
     Taiwan 50 종목에 대한 차트 이미지 생성 및 레이블링
