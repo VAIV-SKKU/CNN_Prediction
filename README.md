@@ -7,7 +7,7 @@
     0/1 Class 간 Unbalance -> Random + Balance (0/1)
     => Label class 간 imbalance 문제 해결
 
-### 2) Forecast Interva
+### 2) Forecast Interval
 
     1 거래일 후 -> 5 거래일 후
     => Transaction 수를 줄임으로써 수수료 절감으로 수익률 향상
