@@ -3,10 +3,12 @@
 ## 2. 변경점
 
 ### 1) Data Sampling 
+
 ```
 0/1 Class 간 Unbalance -> Random + Balance (0/1)
 => Label class 간 imbalance 문제 해결
 ```
+
 ### 2) Forecast Interva
 ```
 1 거래일 후 -> 5 거래일 후
