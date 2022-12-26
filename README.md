@@ -39,3 +39,19 @@
 ---
 ## 3.데이터셋
 
+### 3-1) KOSPI Dataset
+![kospi dataset](https://user-images.githubusercontent.com/82187742/209559303-77f18df2-c866-420f-b72d-f9db4b92f3a8.png)
+
+### 3-2) KOSDAQ Dataset
+![kosdaq dataset](https://user-images.githubusercontent.com/82187742/209559304-aba211b3-088f-4a41-8f45-d5ad598646bb.png)
+
+### 3-3) KOSPI + KOSDAQ Dataset
+![kospikosdaq dataset](https://user-images.githubusercontent.com/82187742/209559301-dfe214b1-e491-46bf-ad95-26ab2ff7fb36.png)
+
+## 4. 결과
+
+### 4-1) KOSPI
+![kospi test](https://user-images.githubusercontent.com/82187742/209559307-d6b1ee7b-607a-4c3d-80f1-fccc5a613048.png)
+
+### 4-2) KOSDAQ
+![kosdaq test](https://user-images.githubusercontent.com/82187742/209559245-19bd98b9-ec54-459b-b7a5-af97aee88507.png)
