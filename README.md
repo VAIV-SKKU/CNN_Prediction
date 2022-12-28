@@ -7,25 +7,18 @@ github 링크 : https://github.com/rosdyana/Going-Deeper-with-Convolutional-Neur
 
 
 ### 1) Dataset
-> Taiwan 50 종목에 대한 차트 이미지 생성 및 레이블링
-
-Image features : OHLC, Volume
-Image size : 50x50
-Labeling(binary) : 상승 시 1, 하락 시 0으로 레이블링
-Tradind period : 20 days
-Forecasting interval : + 1 day
-    
-Train 기간 : 2000.01.01 ~ 2016.12.31 (총 190,433개의 이미지)
-
-- Label 0 : 105,374개의 이미지
-
-- Label 1 : 85,059개의 이미지
-
-Test 기간 : 2017.01.01 ~ 2018.06.14 (총 15,788개의 이미지)
-
-- Label 0 : 8,826개의 이미지
-
-- Label 1 : 6,962개의 이미지
++ Taiwan 50 종목에 대한 차트 이미지 생성 및 레이블링
+    + Image features : OHLC, Volume
+    + Image size : 50x50
+    + Labeling(binary) : 상승 시 1, 하락 시 0으로 레이블링
+    + Tradind period : 20 days
+    + Forecasting interval : + 1 day    
++ Train 기간 : 2000.01.01 ~ 2016.12.31 (총 190,433개의 이미지)
+    + Label 0 : 105,374개의 이미지
+    + Label 1 : 85,059개의 이미지
++ Test 기간 : 2017.01.01 ~ 2018.06.14 (총 15,788개의 이미지)
+    + Label 0 : 8,826개의 이미지
+    + Label 1 : 6,962개의 이미지
 
 
 ### 2) Train / Test
