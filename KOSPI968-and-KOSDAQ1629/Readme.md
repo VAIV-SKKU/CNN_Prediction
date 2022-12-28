@@ -123,6 +123,7 @@ $ python Vgg16_train.py -i KOSPI968/224x224/Kospi/Dataset/4%_01_2_5 -p 20 -d 224
 + Precision
 + Sensitivity
 + F1 score
+
 [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/general_metrics/src/prediction_result.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/general_metrics/src/prediction_result.py) 사용
 
   + Arguments 설명
@@ -138,4 +139,41 @@ $ python prediction_result.py -i KOSPI968/224x224/Kospi/Dataset/4%_01_2_5 -m mod
 ```
 
 ### 4-2. Profit
+#### 4-2-1. Make prediction file
+테스트하고자 하는 모델의 2019, 2020, 2021년도에 대한 prediction 결과를 구한다.
 
++ KOSPI 968 종목 테스트 : [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/profit/src/make_prediction_kospi.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/profit/src/make_prediction_csv_kospi.py)
+  + Arguments 설명
+    + -i : 이미지(.png) 폴더 경로, KOSPI 968 종목 전체 이미지가 들어 있어야 한다.
+    + -s : prediction 결과를 구할 시작 날짜
+    + -e : prediction 결과를 구할 마지막 날짜
+    + -d : image dimension (default : 224)
+    + -o : prediction 결과를 저장할 csv file path
+      + 이미지 정보(날짜, 종목), 예측 결과, 예측 확률
+    + -m : model path
+```
+// 2019 prediction 결과 생성
+$ python make_prediction_kospi.py -i <KOSPI 968 종목 전체 이미지가 들어있는 디렉토리> -s 2019-01-01 -e 2019-12-31 -d 224 -o model1_kospi968_2019_prediction.csv -m model1.h5
+
+// 2020 prediction 결과 생성
+$ python make_prediction_kospi.py -i <KOSPI 968 종목 전체 이미지가 들어있는 디렉토리> -s 2020-01-01 -e 2020-12-31 -d 224 -o model1_kospi968_2020_prediction.csv -m model1.h5
+
+// 2021 prediction 결과 생성
+$ python make_prediction_kospi.py -i <KOSPI 968 종목 전체 이미지가 들어있는 디렉토리> -s 2021-01-01 -e 2021-12-31 -d 224 -o model1_kospi968_2021_prediction.csv -m model1.h5
+```
++ KOSDAQ 1,629 종목 테스트 : [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/profit/src/make_prediction_kosdaq.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/profit/src/make_prediction_csv_kosdaq.py)
+
+
+#### 4-2-2. Calculate profit line by line
+<4-2-1>에서 생성한 csv file에서 각각의 prediction 결과를 기반으로 한 수익률을 구한다.
+기존의 csv file에서 "Profit" Column이 추가되는 방식으로 새로운 csv file을 생성한다.
+
++ KOSPI 968 종목의 prediction 결과에 대한 수익률 계산 : [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/profit/src/calculate_profit_topN_kospi.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/profit/src/calculate_profit_topN_kospi.py)
+
++ KOSDAQ 1,629 종목의 prediction 결과에 대한 수익률 계산 : [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/profit/src/calculate_profit_topN_kosdaq.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/profit/src/calculate_profit_topN_kosdaq.py)
+
+#### 4-2-3.
+
+#### 4-2-4.
+
+#### 4-2-5.
