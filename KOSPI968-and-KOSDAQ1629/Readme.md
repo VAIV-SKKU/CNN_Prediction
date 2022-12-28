@@ -4,7 +4,7 @@ Reference paper : "Using Deep Learning Neural Networks and Candlestick Chart Rep
 ## Data
 ### 데이터셋 구조 예시
 
-'''
+```
 .
 ├── KOSPI968
 │   └── 224x224
@@ -54,7 +54,9 @@ Reference paper : "Using Deep Learning Neural Networks and Candlestick Chart Rep
 │                   ├── train_label.csv
 │                   └── valid_label.csv
 
-'''
+```
 
 ### Data Preprocessing
-png 파일을 pickle
+
+png 파일을 pickle 형식으로 변환
+  
