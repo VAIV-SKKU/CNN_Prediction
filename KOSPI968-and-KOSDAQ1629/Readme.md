@@ -76,7 +76,7 @@ $ python png2pickle.py KOSPI968/224x224/Kospi/Dataset/4%_01_2_5
 ```
 
 ## 3. Training
-+ VGG16
+### 3-1. VGG16
   + [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Train/src/Vgg16_train.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Train/src/Vgg16_train.py) 사용
   + Arguments 설명
     + -i : 사용할 데이터셋 경로
@@ -92,7 +92,7 @@ $ python png2pickle.py KOSPI968/224x224/Kospi/Dataset/4%_01_2_5
 $ python Vgg16_train.py -i KOSPI968/224x224/Kospi/Dataset/4%_01_2_5 -p 20 -d 224 -c 3 -e 20 -b 128 -v model1 -r 0.2 -o outputresult.txt
 ```
 
-  + Train 결과 저장 구조
+### 3-2. Train 결과 저장 구조
 ```
 .
 ├── checkpoints
