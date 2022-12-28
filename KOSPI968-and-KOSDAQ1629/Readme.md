@@ -1,4 +1,4 @@
-#CNN 모델 KOSPI 968종목, KOSDAQ 1,629종목 실험
+# CNN 모델 KOSPI 968종목, KOSDAQ 1,629종목 실험
 Reference paper : "Using Deep Learning Neural Networks and Candlestick Chart Representation to Predict Stock Market" by Rosdyna Mangir Irawan Kusuma, Tang-Thi Ho, Wei-Chun Kao, Yu-Yen Ou and Kai-Lung Hua
 
 ## Data
