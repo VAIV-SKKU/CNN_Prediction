@@ -1,8 +1,8 @@
 # CNN 모델 KOSPI 968종목, KOSDAQ 1,629종목 실험
 Reference paper : "Using Deep Learning Neural Networks and Candlestick Chart Representation to Predict Stock Market" by Rosdyna Mangir Irawan Kusuma, Tang-Thi Ho, Wei-Chun Kao, Yu-Yen Ou and Kai-Lung Hua
 
-## Data
-### 데이터셋 구조 예시
+## 1. Data
+### 1-1. 데이터셋 구조 예시
 
 ```
 .
@@ -56,7 +56,7 @@ Reference paper : "Using Deep Learning Neural Networks and Candlestick Chart Rep
 
 ```
 
-### Data Preprocessing
+### 1-2. Data Preprocessing
 
 png 파일을 pickle 형식으로 변환
   
