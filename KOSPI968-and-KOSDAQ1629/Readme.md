@@ -201,15 +201,19 @@ $ python make_prediction_kospi.py -s 2021-01-01 -e 2021-12-31 -y 2021 -c model1_
   + Orange : 미정 (정답 Class가 없는 경우 - 0 이상 4% 미만 상승)
   + Red : 오답 (Class 1로 예측했는데 정답은 Class 0인 경우)
  
- [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/profit/src/draw_scatter_kospi.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/profit/src/draw_scatter_kospi.py)
++ KOSPI 968 종목에 대한 scatter plot 생성 : [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/profit/src/draw_scatter_kospi.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/profit/src/draw_scatter_kospi.py)
+
  ```
+ $ python draw_scatter_kospi.py 
+ ```
+ + KOSDAQ 1,629 종목에 대한 scatter plot 생성 : [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/profit/src/draw_scatter_kosdaq.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/profit/src/draw_scatter_kosdaq.py)
  
- ```
+ + KOSDAQ 1,629 종목에 대한 scatter plot 생성 (Class 1로 예측한 것이 0 이상 상승한 경우 Green으로 마킹) : [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/profit/src/draw_scatter_without_orange.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/profit/src/draw_scatter_without_orange.py)
 
 생성 예시
 ![buy_scatter_2019_Batch16_Epochs8_Dropout30_profit_without_orange](https://user-images.githubusercontent.com/100757275/209842356-e485dbfb-0b69-4e31-9555-3f1e5a74ba31.png)
 
+#### 4-2-4. Calculate topN profit
 
-#### 4-2-4.
 
-#### 4-2-5.
+#### 4-2-5. Draw topN profit graph
