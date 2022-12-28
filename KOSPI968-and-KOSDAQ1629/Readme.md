@@ -59,4 +59,8 @@ Reference paper : "Using Deep Learning Neural Networks and Candlestick Chart Rep
 ### 1-2. Data Preprocessing
 
 png 파일을 pickle 형식으로 변환
-  
+CNN_Prediction/KOSPI968-and-KOSDAQ1629/Train/src/utils/png2pickle.py 사용
+
+```
+png2pickle.py KOSPI968
+```
