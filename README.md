@@ -23,7 +23,8 @@
         * Pretrained 모델의 경우 ImageNet으로 학습된 모델 사용
 
 ### 3) 실험 결과
-    Taiwan50을 이용하여 DeepCNN, VGG16, ResNet50 세 가지 모델에 대하여 실험을 진행하였고, 동일 조건의 모든 결과에서 VGG16이 가장 좋은 성능을 보였음.
+    Taiwan50을 이용하여 DeepCNN, VGG16, ResNet50 세 가지 모델에 대하여 실험을 진행하였고,
+    동일 조건의 모든 결과에서 VGG16이 가장 좋은 성능을 보였음.
 <img width="603" alt="스크린샷 2022-12-27 오전 2 21 16" src="https://user-images.githubusercontent.com/100757275/209571310-7b977ffe-b86f-442e-b8d7-146cbbf26317.png">
 
 ---
