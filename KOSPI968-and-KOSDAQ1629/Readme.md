@@ -3,6 +3,7 @@ Reference paper : "Using Deep Learning Neural Networks and Candlestick Chart Rep
 
 ## Data
 ### 데이터셋 구조 예시
+
 '''
 .
 ├── KOSPI968
