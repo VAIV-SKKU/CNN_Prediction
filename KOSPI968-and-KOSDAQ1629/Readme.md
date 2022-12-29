@@ -66,8 +66,7 @@ $ pip install -r requirements.txt
 ```
 
 ### 2-2. Data Preprocessing
-
-png 파일을 pickle 형식으로 변환
+> png 파일을 pickle 형식으로 변환
 
 [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Train/src/utils/png2pickle.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Train/src/utils/png2pickle.py) 사용
 
@@ -140,7 +139,7 @@ $ python prediction_result.py -i KOSPI968/224x224/Kospi/Dataset/4%_01_2_5 -m mod
 
 ### 4-2. Profit
 ### 4-2-1. Make prediction file
-테스트하고자 하는 모델의 2019, 2020, 2021년도에 대한 prediction 결과를 구한다.
+> 테스트하고자 하는 모델의 2019, 2020, 2021년도에 대한 prediction 결과를 구한다.
 
 + KOSPI 968 종목 테스트 : [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/profit/src/make_prediction_kospi.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/profit/src/make_prediction_csv_kospi.py)
   + Arguments 설명
@@ -164,9 +163,9 @@ $ python make_prediction_kospi.py -i <KOSPI 968 종목 전체 이미지가 들�
 + KOSDAQ 1,629 종목 테스트 : [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/profit/src/make_prediction_kosdaq.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/profit/src/make_prediction_csv_kosdaq.py)
 
 
-### 4-2-2. Calculate profit line by line
-<4-2-1>에서 생성한 csv file에서 각각의 prediction 결과를 기반으로 한 수익률을 구한다. 
-기존의 csv file에서 "Profit" Column이 추가되는 방식으로 새로운 csv file을 생성한다.
+### 4-2-2. Calculate profit per line
+> <4-2-1>에서 생성한 csv file에서 각각의 prediction 결과를 기반으로 한 수익률을 구한다. </br>
+> 기존의 csv file에서 "Profit" Column이 추가되는 방식으로 새로운 csv file을 생성한다.
 
 + KOSPI 968 종목의 prediction 결과에 대한 수익률 계산 : [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/profit/src/profit_kospi.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/profit/src/profit_kospi.py)
   + Arguments 설명
@@ -191,7 +190,8 @@ $ python make_prediction_kospi.py -s 2021-01-01 -e 2021-12-31 -y 2021 -c model1_
 
 
 ### 4-2-3. Draw scatter
-<4-2-1> 또는 <4-2-2>에서 생성된 csv file에서 Class 1로 예측한 결과의 예측 확률값에 대한 scatter plot을 생성한다.
+> <4-2-1> 또는 <4-2-2>에서 생성된 csv file에서 Class 1로 예측한 결과의 예측 확률값에 대한 scatter plot을 생성
+
 + x축은 날짜, y축은 예측 확률값(0.5~1.0)이다.
 + Labeling 방식 : 4%_01_2_5 (binary)
   + Class 1 : 5일 뒤 4% 이상 상승
