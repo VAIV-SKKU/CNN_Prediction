@@ -214,6 +214,9 @@ $ python make_prediction_kospi.py -s 2021-01-01 -e 2021-12-31 -y 2021 -c model1_
 ![buy_scatter_2019_Batch16_Epochs8_Dropout30_profit_without_orange](https://user-images.githubusercontent.com/100757275/209842356-e485dbfb-0b69-4e31-9555-3f1e5a74ba31.png)
 
 ### 4-2-4. Calculate topN profit
+> <4-2-2>에서 생성한 파일로 일정 기간 동안의 수익률을 구한다. </br>
+> threshold 이상의 예측 확률값 중에서 각 일자별로 상위 N개를 선정하여 일별 수익률 계산 </br>
 
+#### 수익률 계산 식
 
 ### 4-2-5. Draw topN profit graph
