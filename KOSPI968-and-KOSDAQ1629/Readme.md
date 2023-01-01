@@ -3,7 +3,7 @@ Reference paper : "Using Deep Learning Neural Networks and Candlestick Chart Rep
 
 ## 1. Getting Started
 Install packages with:
-```
+```shell script
 $ pip install -r requirements.txt
 ```
 
@@ -70,7 +70,7 @@ $ pip install -r requirements.txt
 
 [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Train/src/utils/png2pickle.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Train/src/utils/png2pickle.py) 사용
 
-```
+```shell script
 $ python png2pickle.py KOSPI968/224x224/Kospi/Dataset/4%_01_2_5
 ```
 
@@ -87,7 +87,7 @@ $ python png2pickle.py KOSPI968/224x224/Kospi/Dataset/4%_01_2_5
     + -v : version name (학습된 모델명 구분을 위해 사용)
     + -r : drop-out rate
     + -o : accuracy, recall 등의 test 결과 저장할 txt file 경로 (.txt)
-```
+```shell script
 $ python Vgg16_train.py -i KOSPI968/224x224/Kospi/Dataset/4%_01_2_5 -p 20 -d 224 -c 3 -e 20 -b 128 -v model1 -r 0.2 -o outputresult.txt
 ```
 
@@ -133,7 +133,7 @@ $ python Vgg16_train.py -i KOSPI968/224x224/Kospi/Dataset/4%_01_2_5 -p 20 -d 224
       + 이미지 정보(날짜, 종목), 예측 결과, 예측 확률
     + -t : 예측 확률값에 대한 threshold
     + -d : image dimension (default : 224x224)
-```
+```shell script
 $ python prediction_result.py -i KOSPI968/224x224/Kospi/Dataset/4%_01_2_5 -m model1.h5 -o output_predict.txt -c model1_prediction.csv -t 0.5 -d 224
 ```
 
@@ -150,7 +150,7 @@ $ python prediction_result.py -i KOSPI968/224x224/Kospi/Dataset/4%_01_2_5 -m mod
     + -o : prediction 결과를 저장할 csv file path
       + 이미지 정보(날짜, 종목), 예측 결과, 예측 확률
     + -m : model path
-```
+```shell script
 // 2019 prediction 결과 생성
 $ python make_prediction_kospi.py -i <KOSPI 968 종목 전체 이미지가 들어있는 디렉토리> -s 2019-01-01 -e 2019-12-31 -d 224 -o model1_kospi968_2019_prediction.csv -m model1.h5
 
@@ -173,9 +173,9 @@ $ python make_prediction_kospi.py -i <KOSPI 968 종목 전체 이미지가 들�
     + -s : prediction 결과를 구한 시작 날짜
     + -e : prediction 결과를 구한 마지막 날짜
     + -y : prediction 결과를 구한 연도
-    + -c : <4.2.1>에서 저장한 prediction 결과 csv file path
+    + -c : <4-2-1>에서 저장한 prediction 결과 csv file path
    + Output file : 기존 파일(prediction 결과 csv file) 이름 끝에 "_profit"가 추가된 이름으로 저장된다. (ex. model1_kospi968_2019_prediction.csv 가 input으로 들어갈 경우 생성되는 파일 이름은 model1_kospi968_2019_prediction_profit.csv)
-```
+```shell script
 // 2019 prediction 결과에 대한 수익률 계산
 $ python make_prediction_kospi.py -s 2019-01-01 -e 2019-12-31 -y 2019 -c model1_kospi968_2019_prediction.csv -o Report
 
@@ -203,7 +203,7 @@ $ python make_prediction_kospi.py -s 2021-01-01 -e 2021-12-31 -y 2021 -c model1_
  
 + KOSPI 968 종목에 대한 scatter plot 생성 : [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/profit/src/draw_scatter_kospi.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/profit/src/draw_scatter_kospi.py)
 
- ```
+ ```shell script
  $ python draw_scatter_kospi.py 
  ```
  + KOSDAQ 1,629 종목에 대한 scatter plot 생성 : [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/profit/src/draw_scatter_kosdaq.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/profit/src/draw_scatter_kosdaq.py)
@@ -217,6 +217,44 @@ $ python make_prediction_kospi.py -s 2021-01-01 -e 2021-12-31 -y 2021 -c model1_
 > <4-2-2>에서 생성한 파일로 일정 기간 동안의 수익률을 구한다. </br>
 > threshold 이상의 예측 확률값 중에서 각 일자별로 상위 N개를 선정하여 일별 수익률 계산 </br>
 
-#### 수익률 계산 식
++ KOSPI 968 종목에 대한 누적 수익률 계산 : [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/profit/src/calculate_profit_topN_kospi.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/profit/src/calculate_profit_topN_kospi.py)
+  + Arguments 설명
+    + -c : <4-2-2>에서 저장한 profit을 포함한 prediction 결과 csv file path
+    + -n : 상위 N개 종목
+    + -p : 예측 확률값에 대한 threshold
+    + -y : 수익률 계산할 연도
+ ```shell script
+ // 2019년도 수익률 계산
+ $ python calculate_profit_topN_kospi.py -c model1_kospi968_2019_prediction.csv -n 20 -p 0.5 -y 2019
+ 
+  // 2020년도 수익률 계산
+ $ python calculate_profit_topN_kospi.py -c model1_kospi968_2020_prediction.csv -n 20 -p 0.5 -y 2020
+ 
+  // 2021년도 수익률 계산
+ $ python calculate_profit_topN_kospi.py -c model1_kospi968_2021_prediction.csv -n 20 -p 0.5 -y 2021
+ ```
+
++ KOSDAQ 1,629 종목에 대한 누적 수익률 계산 : [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/profit/src/calculate_profit_topN_kosdaq.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/profit/src/calculate_profit_topN_kosdaq.py)
+
 
 ### 4-2-5. Draw topN profit graph
+> <4-2-2>에서 생성한 파일로 2019년도, 2020년도, 2021년도 누적 수익률 그래프를 그린다. </br>
+> threshold 이상의 예측 확률값 중에서 각 일자별로 상위 N개를 선정하여 일별 수익률 계산 </br>
+
++ KOSPI 968 종목에 대한 2019~2021년도 누적 수익률 그래프 그리기 : [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/profit/src/draw_profit_graph_kospi.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/profit/src/draw_profit_graph_kospi.py)
+  + Arguments 설명
+    + -n : 상위 N개 종목
+    + -o : output png file path
+    + -t : graph title
+    + -s : 수익률 계산 시작 날짜
+    + -e : 수익률 계산 마지막 날짜
+    
+ ```shell script
+ $ python draw_profit_graph_kospi.py -n 20 -o kospi_graph.png -t "kospi graph" -s 2019-01-01 -e 2021-12-31
+ ```
+
++ KOSDAQ 1,629 종목에 대한 2019~2021년도 누적 수익률 그래프 그리기 : [CNN_Prediction/KOSPI968-and-KOSDAQ1629/Test/profit/src/draw_profit_graph_kosdaq.py](https://github.com/VAIV-SKKU/CNN_Prediction/blob/main/KOSPI968-and-KOSDAQ1629/Test/profit/src/draw_profit_graph_kosdaq.py)
+
+생성 예시
+![kosdaq](https://user-images.githubusercontent.com/100757275/210163568-1cf3ded9-f8cb-4667-8037-f116afdf0f46.png)
+
